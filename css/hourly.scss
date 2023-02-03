@@ -1,0 +1,70 @@
+@import "mixin";
+
+.hourly-section {
+  margin-top: 30px;
+  .inner {
+    position: relative;
+    overflow: hidden;
+    overflow-x: scroll;
+    width: 95%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+    background: rgba(#000, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    div.hour-container {
+      display: inline-flex;
+      position: relative;
+      .chart {
+        position: absolute;
+        width: calc(100% - 70px);
+        height: 300px;
+        left: 35px;
+        bottom: 0;
+        .grid {
+          position: absolute;
+          height: 330px;
+          width: 0;
+          top: -15px;
+          left: -20px;
+          span{
+            display: flex;
+            align-items: center;
+            height: 9.090909%;
+            font-size: 0.5em;
+          }//span
+        }//grid
+
+      } //chart
+      ul {
+        display: inline-flex; //inlin-flex는 범위 밖으로 flex 시켜줌
+        li {
+          width: 70px;
+          height: 450px;
+          // border: 1px solid red;
+          box-sizing: border-box;
+          > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            b {
+              display: block;
+              margin: 2px 0;
+              font-size: 0.8em;
+              i {
+                margin-right: 5px;
+              }
+            } //b
+            img {
+              width: 50px;
+              border-radius: 50%;
+            } //img
+          } //div
+        } //li
+      } //ul
+    } //div.hour-container
+  } //inner
+} //hourly-section
